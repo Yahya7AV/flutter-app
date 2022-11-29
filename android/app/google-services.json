@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "59064014171",
+    "project_id": "taosil-2002bc",
+    "storage_bucket": "taosil-2002bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59064014171:android:d8490f8028070be73db67e",
+        "android_client_info": {
+          "package_name": "avestagroup.taosil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "59064014171-gkjv0qia58nicao4vu6943rjvbpg4ljg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR0ZMPpbUby9Ro9T_ftEg2CWPy0_ETK0o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "59064014171-gkjv0qia58nicao4vu6943rjvbpg4ljg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "59064014171-87ubpjcu4itf3k7n9hm39ofctibd0pgd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.taosil"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59064014171:android:9498fa353bab434b3db67e",
+        "android_client_info": {
+          "package_name": "com.example.taosil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "59064014171-gkjv0qia58nicao4vu6943rjvbpg4ljg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR0ZMPpbUby9Ro9T_ftEg2CWPy0_ETK0o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "59064014171-gkjv0qia58nicao4vu6943rjvbpg4ljg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "59064014171-87ubpjcu4itf3k7n9hm39ofctibd0pgd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.taosil"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
