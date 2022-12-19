@@ -1,7 +1,7 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'dart:developer' as devtools show log;
 import 'package:taosil/constants/routes.dart';
+import '../utilities/show_error_dialog.dart';
 
 class RegisterView extends StatefulWidget {
   const RegisterView({super.key});
@@ -58,18 +58,25 @@ class _RegisterViewState extends State<RegisterView> {
               final email = _email.text;
               final password = _password.text;
               try {
-                final userCredential = await FirebaseAuth.instance
-                    .createUserWithEmailAndPassword(
-                        email: email, password: password);
-                devtools.log(userCredential.toString());
+                await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                    email: email, password: password);
+                final user = FirebaseAuth.instance.currentUser;
+                await user?.sendEmailVerification();
+                Navigator.of(context).pushNamed(
+                    verifyEmailRoute); //does not remove the register view if the user put a wrong email, he/she can go back to the register view and edit the email
               } on FirebaseAuthException catch (e) {
                 if (e.code == "weak-password") {
-                  devtools.log("WEAK PASSWORD!");
+                  await showErrorDialog(context, "Weak Password!");
                 } else if (e.code == "email-already-in-use") {
-                  devtools.log("THIS EMAIL IS NOT AVAILABLE");
+                  await showErrorDialog(
+                      context, "This Email is not available!");
                 } else if (e.code == "invalid-email") {
-                  devtools.log("INVAILD EMAIL!");
+                  await showErrorDialog(context, "Invalid Email Address");
+                } else {
+                  await showErrorDialog(context, 'Error: ${e.code}');
                 }
+              } catch (e) {
+                await showErrorDialog(context, e.toString());
               }
             },
             child: const Text("Register"),

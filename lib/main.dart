@@ -6,7 +6,6 @@ import 'package:taosil/views/login_view.dart';
 import 'package:taosil/views/register_view.dart';
 import 'package:taosil/views/verify_email.dart';
 import 'firebase_options.dart';
-import 'dart:developer' as devtools show log;
 
 void main(List<String> args) {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,6 +20,7 @@ void main(List<String> args) {
         loginRoute: (context) => const LoginView(),
         registerRoute: (context) => const RegisterView(),
         notesRoute: (context) => const NotesView(),
+        verifyEmailRoute: (context) => const VerifyEmailView(),
       },
     ),
   );
@@ -111,7 +111,7 @@ Future<bool> showLogOutDialog(BuildContext context) {
     context: context,
     builder: ((context) {
       return AlertDialog(
-        title: const Text("Sign Out"),
+        title: const Text("Log Out"),
         content: const Text("Do you want to sign out?"),
         actions: [
           TextButton(
