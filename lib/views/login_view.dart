@@ -1,5 +1,4 @@
-﻿import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:taosil/constants/routes.dart';
 import '../utilities/show_error_dialog.dart';
