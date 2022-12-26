@@ -1,8 +1,7 @@
-﻿import 'package:firebase_auth/firebase_auth.dart';
-import 'package:taosil/services/auth/auth_exceptions.dart';
+﻿import 'package:taosil/services/auth/auth_exceptions.dart';
 import 'package:taosil/services/auth/auth_provider.dart';
 import 'package:taosil/services/auth/auth_user.dart';
-import 'package:taosil/services/auth/firebase_auth_provider.dart'
+import 'package:firebase_auth/firebase_auth.dart'
     show FirebaseAuth, FirebaseAuthException;
 
 class FirebaseAuthProvider implements AuthProvider {
