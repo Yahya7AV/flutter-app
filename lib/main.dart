@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:taosil/constants/routes.dart';
 import 'package:taosil/services/auth/auth_service.dart';
 import 'package:taosil/views/login_view.dart';
-import 'package:taosil/views/notes/new_note_view.dart';
+import 'package:taosil/views/notes/create_update_note_view.dart';
 import 'package:taosil/views/notes/notes_view.dart';
 import 'package:taosil/views/register_view.dart';
 import 'package:taosil/views/verify_email.dart';
@@ -21,7 +21,7 @@ void main(List<String> args) {
         registerRoute: (context) => const RegisterView(),
         notesRoute: (context) => const NotesView(),
         verifyEmailRoute: (context) => const VerifyEmailView(),
-        newNoteRoute: (context) => const NewNoteView(),
+        createOrUpdateNoteRoute: (context) => const CreateUpdateNoteView(),
       },
     ),
   );
