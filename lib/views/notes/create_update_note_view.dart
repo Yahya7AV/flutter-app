@@ -5,7 +5,6 @@ import 'package:taosil/utilities/dialogs/cannot_share_empty_note_dialog.dart';
 import 'package:taosil/utilities/generics/get_arguments.dart';
 import 'package:taosil/services/cloud/cloud_note.dart';
 import 'package:taosil/services/cloud/firebase_cloud_storage.dart';
-import 'package:taosil/services/cloud/cloud_storage_exceptions.dart';
 
 class CreateUpdateNoteView extends StatefulWidget {
   const CreateUpdateNoteView({super.key});
@@ -58,7 +57,6 @@ class _CreateUpdateNoteViewState extends State<CreateUpdateNoteView> {
       return existingNote;
     }
     final currentUser = AuthService.firebase().currentUser!;
-    final email = currentUser.email;
     final userId = currentUser.id;
     final newNote = await _notesService.createNewNote(ownerUserId: userId);
     _note = newNote;

@@ -64,6 +64,7 @@ class _RegisterViewState extends State<RegisterView> {
                   password: password,
                 );
                 AuthService.firebase().sendEmailVerification();
+                // ignore: use_build_context_synchronously
                 Navigator.of(context).pushNamed(
                     verifyEmailRoute); //does not remove the register view if the user put a wrong email, he/she can go back to the register view and edit the email
               } on WeakPasswordAuthException {
